@@ -7,6 +7,8 @@ class Bill_App:
                 self.root=root
                 self.root.geometry("1350x700+0+0")
                 self.root.title("Resturant Billing system")
+                #after saving the icon in your directory change its path
+                self.root.iconbitmap(r"C:\myprojects\ResturantBillingSystem\img\logo.ico")
                 bg_color="light pink"
                 
                 title=Label(self.root,text="Anmol Resturant",bd=14,relief=GROOVE,bg=bg_color,fg="Black", font=("times new roman",30,"bold"),pady=2).pack(fill=X)
@@ -59,38 +61,38 @@ class Bill_App:
                 F1=LabelFrame(self.root,bd=10,text="Customer Details", font=("times new roman",20,"bold"),fg="black",bg=bg_color)
                 F1.place(x=0,y=80,relwidth=1)
                 
-                cname_lbl=Label(F1,text="customer Name",bg=bg_color,font=("times new roman",18,"bold")).grid(row=0,column=0,padx=20,pady=5)
+                cname_lbl=Label(F1,text="Customer Name",bg=bg_color,font=("times new roman",18,"bold")).grid(row=0,column=0,padx=20,pady=5)
                 cname_txt=Entry(F1,width=20,textvariable=self.c_name,font="arial 15",bd=6,relief=SUNKEN).grid(row=0,column=1,padx=10,pady=5)
                 
-                cphone_lbl=Label(F1,text="phone.No",bg=bg_color,font=("times new roman",18,"bold")).grid(row=0,column=2,padx=20,pady=5)
+                cphone_lbl=Label(F1,text="Phone.No",bg=bg_color,font=("times new roman",18,"bold")).grid(row=0,column=2,padx=20,pady=5)
                 cphone_txt=Entry(F1,width=15,textvariable=self.c_phone,font="arial 15",bd=6,relief=SUNKEN).grid(row=0,column=3,padx=10,pady=5)
                 
                 cbiilno_lbl=Label(F1,text="Bill Number",bg=bg_color,font=("times new roman",18,"bold")).grid(row=0,column=4,padx=20,pady=5)
                 cbillno_txt=Entry(F1,width=15,textvariable=self.c_bill_no,font="arial 15",bd=6,relief=SUNKEN).grid(row=0,column=5,padx=10,pady=5)
                 
                 search_btn=Button(F1,text="Search",command=self.find_bill,bg="White",fg="black",bd=7,pady=15,width=10,font="arial 15 bold").grid(row=0,column=6,padx=5,pady=5)
-                #bill_btn=Button(F1,text="save",command=self.find_bill,width=15,textvariable=self.search_bill,activeforeground="Black",activebackground = "green",bd=7,font=("arial 10 bold")).grid(row=0,column=6,padx=10,pady=10)
+                #bill_btn=Button(F1,text="save",command=self.find_bill,width=15,textvariable=self.search_bill,activeforeground="Black",activebackground = "brown",bd=7,font=("arial 10 bold")).grid(row=0,column=6,padx=10,pady=10)
                 #bill_txt=Entry(F1,width=15,textvariable=self.search_bill,font="arial 15",bd=6,relief=SUNKEN).grid(row=0,column=5,padx=10,pady=5)
                 #=======Veg menu=========
                 F2=LabelFrame(self.root,bd=10,text="VEG MENU", font=("times new roman",18,"bold"),fg="black",bg=bg_color)
                 F2.place(x=5,y=180,width=330,height=380)
                 
-                paneer_Lbl=Label(F2,text="kadhai paneer",font=("times new roman",16,"bold"),bg=bg_color,fg="Blue",bd=5).grid(row=0,column=0,padx=0,pady=0,sticky="w")
+                paneer_Lbl=Label(F2,text="kadhai paneer",font=("times new roman",16,"bold"),bg=bg_color,fg="green",bd=5).grid(row=0,column=0,padx=0,pady=0,sticky="w")
                 paneer_txt=Entry(F2,width=15,textvariable=self.kadhai_paneer,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=0,column=1,padx=10,pady=10)
                 
-                chilli_Lbl=Label(F2,text="Chilli Paneer",font=("times new roman",16,"bold"),bg=bg_color,fg="Blue",bd=5).grid(row=1,column=0,padx=0,pady=0,sticky="w")
+                chilli_Lbl=Label(F2,text="Chilli Paneer",font=("times new roman",16,"bold"),bg=bg_color,fg="green",bd=5).grid(row=1,column=0,padx=0,pady=0,sticky="w")
                 chilli_txt=Entry(F2,width=15,textvariable=self.chilli_paneer,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=1,column=1,padx=10,pady=10)
                 
-                chowmein_Lbl=Label(F2,text="Veg Chowmein",font=("times new roman",16,"bold"),bg=bg_color,fg="Blue",bd=5).grid(row=2,column=0,padx=0,pady=0,sticky="w")
+                chowmein_Lbl=Label(F2,text="Veg Chowmein",font=("times new roman",16,"bold"),bg=bg_color,fg="green",bd=5).grid(row=2,column=0,padx=0,pady=0,sticky="w")
                 chowmein_txt=Entry(F2,width=15,textvariable=self.veg_chowmein,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=2,column=1,padx=10,pady=10)
                 
-                chola_Lbl=Label(F2,text="Chola bhatura",font=("times new roman",16,"bold"),bg=bg_color,fg="Blue",bd=5).grid(row=3,column=0,padx=0,pady=0,sticky="w")
+                chola_Lbl=Label(F2,text="Chola bhatura",font=("times new roman",16,"bold"),bg=bg_color,fg="green",bd=5).grid(row=3,column=0,padx=0,pady=0,sticky="w")
                 chola_txt=Entry(F2,width=15,textvariable=self.chola_bhatura,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=3,column=1,padx=10,pady=10)
                 
-                pizza_Lbl=Label(F2,text="Veg Cheese Pizza",font=("times new roman",16,"bold"),bg=bg_color,fg="Blue",bd=5).grid(row=4,column=0,padx=0,pady=0,sticky="w")
+                pizza_Lbl=Label(F2,text="Veg Cheese Pizza",font=("times new roman",16,"bold"),bg=bg_color,fg="green",bd=5).grid(row=4,column=0,padx=0,pady=0,sticky="w")
                 pizza_txt=Entry(F2,width=15,textvariable=self.veg_cheese_pizza,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=4,column=1,padx=10,pady=10)
                 
-                Edli_Lbl=Label(F2,text="Edli sambar",font=("times new roman",16,"bold"),bg=bg_color,fg="Blue",bd=5).grid(row=5,column=0,padx=0,pady=0,sticky="w")
+                Edli_Lbl=Label(F2,text="Edli sambar",font=("times new roman",16,"bold"),bg=bg_color,fg="green",bd=5).grid(row=5,column=0,padx=0,pady=0,sticky="w")
                 Edli_txt=Entry(F2,width=15,textvariable=self.Edli_sambar,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=5,column=1,padx=10,pady=10)
                 
                 
@@ -122,22 +124,22 @@ class Bill_App:
                 F4=LabelFrame(self.root,bd=10,text="DESSERTS", font=("times new roman",18,"bold"),fg="black",bg=bg_color)
                 F4.place(x=670,y=180,width=330,height=380)
                 
-                cream_Lbl=Label(F4,text="Strawberry icecream",font=("times new roman",16,"bold"),bg=bg_color,fg="green").grid(row=0,column=0,padx=10,pady=10,sticky="w")
+                cream_Lbl=Label(F4,text="Strawberry icecream",font=("times new roman",16,"bold"),bg=bg_color,fg="brown").grid(row=0,column=0,padx=10,pady=10,sticky="w")
                 cream_txt=Entry(F4,width=15,textvariable=self.strawberry_icecream,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=0,column=1,padx=10,pady=10)
                 
-                jilabi_Lbl=Label(F4,text="Jalaebi",font=("times new roman",16,"bold"),bg=bg_color,fg="green").grid(row=1,column=0,padx=10,pady=10,sticky="w")
+                jilabi_Lbl=Label(F4,text="Jalaebi",font=("times new roman",16,"bold"),bg=bg_color,fg="brown").grid(row=1,column=0,padx=10,pady=10,sticky="w")
                 jilabi_txt=Entry(F4,width=15,textvariable=self.Jalaebi,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=1,column=1,padx=10,pady=10)
                 
-                rasmalai_Lbl=Label(F4,text="Rasmalai",font=("times new roman",16,"bold"),bg=bg_color,fg="green").grid(row=2,column=0,padx=10,pady=10,sticky="w")
+                rasmalai_Lbl=Label(F4,text="Rasmalai",font=("times new roman",16,"bold"),bg=bg_color,fg="brown").grid(row=2,column=0,padx=10,pady=10,sticky="w")
                 rasmalai_txt=Entry(F4,width=15,textvariable=self.Rasmalai,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=2,column=1,padx=10,pady=10)
                 
-                custurd_Lbl=Label(F4,text="Fruit custurd",font=("times new roman",16,"bold"),bg=bg_color,fg="green").grid(row=3,column=0,padx=10,pady=10,sticky="w")
+                custurd_Lbl=Label(F4,text="Fruit custurd",font=("times new roman",16,"bold"),bg=bg_color,fg="brown").grid(row=3,column=0,padx=10,pady=10,sticky="w")
                 custurd_txt=Entry(F4,width=15,textvariable=self.Fruit_custurd,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=3,column=1,padx=10,pady=10)
                 
-                jamun_Lbl=Label(F4,text="Gulab Jamun",font=("times new roman",16,"bold"),bg=bg_color,fg="green").grid(row=4,column=0,padx=10,pady=10,sticky="w")
+                jamun_Lbl=Label(F4,text="Gulab Jamun",font=("times new roman",16,"bold"),bg=bg_color,fg="brown").grid(row=4,column=0,padx=10,pady=10,sticky="w")
                 jamun_txt=Entry(F4,width=15,textvariable=self.Gulab_jamun,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=4,column=1,padx=10,pady=10)
                 
-                Vanilla_Lbl=Label(F4,text="Vanilla pastry",font=("times new roman",16,"bold"),bg=bg_color,fg="green").grid(row=5,column=0,padx=10,pady=10,sticky="w")
+                Vanilla_Lbl=Label(F4,text="Vanilla pastry",font=("times new roman",16,"bold"),bg=bg_color,fg="brown").grid(row=5,column=0,padx=10,pady=10,sticky="w")
                 vanilla_txt=Entry(F4,width=15,textvariable=self.Vanilla_pastry,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=5,column=1,padx=10,pady=10)
                 
                 #====Bill area====
